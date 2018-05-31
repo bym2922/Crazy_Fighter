@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>飞机大战</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='src/css/style.css') }}"/>
+	</head>
+	<body>
+		<div id="main1">
+			<div id="title">
+				<span id="span1"><i>飞机大战</i></span>
+				<img src="{{ url_for('static',filename='src/img/loading8.png') }}"/>
+				<div id="menu">
+					<span id="span2"><i><strong>&nbsp;Welcome&nbsp;</strong></i></span>
+					<div id="login1">
+                        {% block img_content %}
+                        {% endblock %}
+					</div>
+                    <div id="login2">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+				</div>
+                {% block back %}
+                {% endblock %}
+			</div>
+		</div>
+	</body>
+</html>

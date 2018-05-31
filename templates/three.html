@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <style>
+    .bg{
+        background-image: url("/src/img/bg.jpg");
+    }
+    </style>
+{% endblock %}
+
+{% block grade2 %}
+    <div id="grade_logo2"></div>
+    <div id="grade2"><strong>0</strong></div>
+{% endblock %}
+
+{% block mus %}
+    <div id="mus">
+        <audio  src="{{ url_for('static',filename='src/music/three_music.mp3') }}" autoplay="autoplay" preload="auto" controls="controls" loop="loop"></audio>
+    </div>
+{% endblock %}
+
+{% block Scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='src/js/three.js') }}" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+

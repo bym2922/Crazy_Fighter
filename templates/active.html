@@ -1,0 +1,2 @@
+<h1>Hello {{ username }}</h1>
+<p>您已注册成功，快点击右侧的激活链接，激活你的账号吧。。 <a href="{{ url_for('active',token=token,_external=True) }}">点击这里</a></p>

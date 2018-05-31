@@ -1,0 +1,16 @@
+{% extends 'reg_log_base.html' %}
+{% block img_content %}
+    <img src="{{ url_for('static',filename='src/img/buffer4.png') }}" id="log1"/></br>
+    <img src="{{ url_for('static',filename='src/img/buffer4.png') }}" id="log1"/></br>
+{% endblock %}
+{% block content %}
+    <form action="" method="post">
+        <strong>用户名：<input type="text" name="username" autofocus placeholder="{{ data.uname }}"></strong></br></br>
+        <strong>密&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" placeholder="{{ data.pass }}"></strong></br></br>
+        <div style="margin-left: -20px;"><h4 style="color: sandybrown;align-content: center">{{ get_flashed_messages()[0] }}</h4></div></br>
+        <button type="submit" class="btn">登录</button>
+        <button type="button" onclick="location = '{{ url_for('register') }}'" class="btn" >注册</button>
+    </form>
+{% endblock %}
+
+

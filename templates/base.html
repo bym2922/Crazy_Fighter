@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='src/css/style.css') }}"/>
+        {% block style %}
+        {% endblock %}
+	</head>
+	<body>
+		<div id="mainScreen">
+            {% block mus %}
+            {% endblock %}
+			<div id="bg1" class="bg"></div>
+			<div id="bg2" class="bg"></div>
+			<div id="grade_logo1"></div>
+			<div id="grade1"><strong>0</strong></div>
+            {% block grade2 %}
+            {% endblock %}
+			<div id="airplane"></div>
+            <div id="airplane1"></div>
+            <div id="score">
+                <h1 style="align-self: center;color: yellow;margin-left: 120px;margin-top: 10px"><strong>最终得分</strong></h1>
+                <p id="final_socre1"></p>
+                <p id="final_socre2"></p>
+                <span onclick="myClose()" id="close">返回菜单</span>
+            </div>
+		</div>
+	</body>
+    {% block Scripts %}
+        <script src="{{ url_for('static', filename='src/js/sunckBase.js') }}" type="text/javascript" charset="utf-8"></script>
+    {% endblock %}
+</html>

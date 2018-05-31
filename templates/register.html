@@ -1,0 +1,20 @@
+{% extends 'reg_log_base.html' %}
+{% block img_content %}
+    <img src="{{ url_for('static',filename='src/img/buffer4.png') }}" id="log1"/></br>
+    <img src="{{ url_for('static',filename='src/img/buffer4.png') }}" id="log1"/></br>
+    <img src="{{ url_for('static',filename='src/img/buffer4.png') }}" id="log1"/></br>
+{% endblock %}
+{% block content %}
+    <form action="" method="post">
+        <strong>用户名：<input type="text" name="username" autofocus placeholder="{{ data.uname }}"></strong></br></br>
+        <strong>密&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" placeholder="{{ data.pass }}"></strong></br></br>
+        <strong>邮&nbsp;&nbsp;&nbsp;箱：<input type="email" name="email" placeholder="{{ data.emai }}"></strong></br></br>
+        <button type="submit" class="btn"><strong>注册</strong></button>
+        <button type="reset"  class="btn"><strong>重置</strong></button>
+    </form>
+{% endblock %}
+{% block back %}
+    <div class="back">
+        <a href="{{ url_for('index') }}"><strong>退出 >></strong></a>
+    </div>
+{% endblock %}

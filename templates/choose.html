@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>飞机大战</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='src/css/style.css') }}"/>
+	</head>
+	<body>
+		<div id="main1">
+			<div id="mus">
+				<audio src="{{ url_for('static',filename='src/music/music_0.mp3') }}" autoplay="autoplay" preload="auto" controls="controls" loop="loop"></audio>
+			</div>
+			<div id="title">
+				<span id="span1"><i>飞机大战</i></span>
+				<img src="{{ url_for('static',filename='src/img/loading8.png') }}"/>
+				<div id="menu">
+					<span id="span2"><i><strong>&nbsp;&nbsp;难&nbsp;&nbsp;度&nbsp;&nbsp;选&nbsp;&nbsp;择&nbsp;&nbsp;</strong></i></span>
+					<div id="differ">
+						<a href="{{ url_for('first') }}"><img src="{{ url_for('static',filename='src/img/stageClassWord0.png') }}" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ url_for('static',filename='src/img/plane1_peek.png') }}" id="log"/></a></br></br>
+						<a href="{{ url_for('secondry') }}"><img src="{{ url_for('static',filename='src/img/stageClassWord1.png') }}" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ url_for('static',filename='src/img/plane1_peek.png') }}" id="log"/></a></br></br>
+						<a href="{{ url_for('three') }}"><img src="{{ url_for('static',filename='src/img/stageClassWord2.png') }}" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ url_for('static',filename='src/img/plane1_peek.png') }}" id="log"/></a></br></br>
+					</div>
+				</div>
+                <div class="back">
+                    <a href="{{ url_for('index') }}"><strong>退出 >></strong></a>
+                </div>
+			</div>
+		</div>
+	</body>
+</html>
